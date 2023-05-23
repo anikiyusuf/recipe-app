@@ -129,7 +129,7 @@ export default function CreateRecipe() {
     }
 
     try {
-      await axios.post("http://localhost:3001/recipes", formData, {
+      await axios.post("https://recipeapp-server.onrender.com/recipes", formData, {
         headers: { authorization: cookies.access_token },
       });
       alert("Recipe created!");

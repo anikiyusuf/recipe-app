@@ -18,7 +18,7 @@ export default function Login() {
     const handleSubmit = async (event) =>{
         event.preventDefault();
         try{
-         const result = await axios.post("http://localhost:3001/auth/login" , {
+         const result = await axios.post("https://recipeapp-server.onrender.com/auth/login" , {
         username,
         password,
     });
