@@ -19,7 +19,7 @@ export default function Register() {
     const handleSubmit = async (event) => {
       event.preventDefault();
       try {
-        await axios.post("https://serverside-xs7y.onrender.com/auth/register" , { 
+        await axios.post("http://localhost:3001/auth/register" , { 
          username,
           password,
         });

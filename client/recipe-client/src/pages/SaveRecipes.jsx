@@ -23,7 +23,7 @@ let PageSize = 6
     const fetchSavedRecipes = async () => {
       try {
         const response = await axios.get(
-          `https://serverside-xs7y.onrender.com/recipes/savedRecipes/${userID}`
+          `http://localhost:3001/recipes/savedRecipes/${userID}`
         );
         setSavedRecipes(response.data.savedRecipes);
       } catch (err) {

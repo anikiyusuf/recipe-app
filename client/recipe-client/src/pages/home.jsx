@@ -24,7 +24,7 @@ const currentTableData = useMemo(() => {
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        const response = await axios.get("https://serverside-xs7y.onrender.com/recipes");
+        const response = await axios.get("http://localhost:3001/recipes");
         setRecipes(response.data);
       } catch (err) {
         console.log(err);
@@ -34,7 +34,7 @@ const currentTableData = useMemo(() => {
     const fetchSavedRecipes = async () => {
       try {
         const response = await axios.get(
-          `https://serverside-xs7y.onrender.com/recipes/savedRecipes/ids/${userID}`
+          `http://localhost:3001/recipes/savedRecipes/ids/${userID}`
         );
         setSavedRecipes(response.data.savedRecipes);
       } catch (err) {
@@ -48,7 +48,7 @@ const currentTableData = useMemo(() => {
 
   const saveRecipe = async (recipeID) => {
     try {
-      const response = await axios.put("https://serverside-xs7y.onrender.com/recipes", {
+      const response = await axios.put("http://localhost:3001/recipes", {
         recipeID,
         userID,
       });
